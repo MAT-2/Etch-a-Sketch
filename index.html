@@ -11,6 +11,7 @@
 <body>
   <div class="flex-container">
     <div class="title"><h1>Fun and Dandy Sketch Pad</h1></div>
+    <div class="mode">Mode: coloring</div>
     <div class="content">
       <div class="board"></div>
       <div class="button">
@@ -18,12 +19,15 @@
         <button onclick="changeColor('black')">Black</button>
         <button onclick="changeColor('white')">Eraser</button>
         <button onclick="changeColor('random')">Random</button>
-        <button>Reset</button>
+        <button onclick="resetBoard('white')">Reset</button>
       </div>
       <div>
         <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
 
         <button>Set Size</button>
+      </div>
+      <div class="error">
+        Input must be between 2 and 200 pixels
       </div>
     </div>
   </div>
